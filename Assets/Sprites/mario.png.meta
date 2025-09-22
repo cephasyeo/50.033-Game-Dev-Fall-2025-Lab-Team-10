@@ -1,0 +1,272 @@
+fileFormatVersion: 2
+guid: f1bde3f95d8d049e59a4208ea4358c51
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: mario_stationary_right
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 172
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3c67a2eb1179be489c83c2b7f05011d
+      internalID: -971332569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mario_stationary_left
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 172
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c4d4be7dc8b7ac40b5642f122d6a1b1
+      internalID: 385727176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      mario_0: -1399426719
+      mario_1: -1775693592
+      mario_10: -1405069272
+      mario_11: 640251304
+      mario_12: -920922554
+      mario_13: -1115974009
+      mario_14: 412845291
+      mario_15: 705406245
+      mario_16: 1679833903
+      mario_17: 852539412
+      mario_18: 1200692048
+      mario_19: -870387173
+      mario_2: 8625452
+      mario_20: 137195515
+      mario_21: -2023313757
+      mario_22: -499392030
+      mario_23: -1646480912
+      mario_24: 980433596
+      mario_25: 2120646321
+      mario_26: -921956888
+      mario_27: 1958860203
+      mario_28: 507012480
+      mario_29: 1211980516
+      mario_3: 1569669844
+      mario_30: -13210995
+      mario_31: -1691324463
+      mario_32: 1870222306
+      mario_33: 226054644
+      mario_34: -2002530415
+      mario_35: 919066108
+      mario_36: -2062177791
+      mario_37: 1551057164
+      mario_38: 1110790788
+      mario_39: -1675340070
+      mario_4: 25533196
+      mario_40: 1898366136
+      mario_41: 2129565421
+      mario_42: -1238187835
+      mario_43: 1597614171
+      mario_44: -906805522
+      mario_45: 926413175
+      mario_46: -145215216
+      mario_47: 2046008172
+      mario_48: 1464504979
+      mario_49: 1517243181
+      mario_5: 728528763
+      mario_50: 538908421
+      mario_51: 495113705
+      mario_52: -564400404
+      mario_53: -1063485800
+      mario_54: 72580049
+      mario_55: -187534862
+      mario_56: -250183967
+      mario_57: 384986816
+      mario_58: -183054292
+      mario_59: -477445650
+      mario_6: 1707237828
+      mario_60: -603516264
+      mario_61: 905956000
+      mario_62: 1051417669
+      mario_63: -220864943
+      mario_64: -774629494
+      mario_65: 73020569
+      mario_66: -109187171
+      mario_67: -643588427
+      mario_68: 465945200
+      mario_69: 383245167
+      mario_7: 273710145
+      mario_70: -1436118157
+      mario_71: 1617948340
+      mario_72: 538969448
+      mario_73: 103127300
+      mario_74: -627061661
+      mario_75: 996788222
+      mario_76: -1602304989
+      mario_77: 212832658
+      mario_78: 1174020719
+      mario_79: -88814379
+      mario_8: 1120317936
+      mario_80: 922609131
+      mario_81: -1820116063
+      mario_82: -1862034332
+      mario_83: -247411757
+      mario_84: -1190452355
+      mario_85: 381108258
+      mario_86: 1318814141
+      mario_87: -1962463470
+      mario_9: 2092271036
+      mario_stationary_left: 385727176
+      mario_stationary_right: -971332569
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
