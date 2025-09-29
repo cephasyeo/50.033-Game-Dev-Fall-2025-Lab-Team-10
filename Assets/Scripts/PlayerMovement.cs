@@ -27,6 +27,16 @@ public class PlayerMovement : MonoBehaviour
 
     public AudioSource marioAudio;
 
+    public AudioClip marioDeath;
+    public float deathImpulse = 15;
+
+    // state
+    [System.NonSerialized]
+    public bool alive = true;
+    void PlayDeathImpulse()
+    {
+        marioBody.AddForce(Vector2.up * deathImpulse, ForceMode2D.Impulse);
+    }
     void PlayJumpSound()
     {
         // play jump sound
@@ -91,7 +101,14 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy"))
         {
             Debug.Log("Collided with goomba!");
-            GameOver();
+            // play death animation
+            marioAnimator.Play("mario-die");
+            marioAudio.PlayOneShot(marioDeath);
+            alive = false;
+
+            // GameOver();
+
+
         }
     }
 
@@ -112,6 +129,10 @@ public class PlayerMovement : MonoBehaviour
     // FixedUpdate may be called once per frame. See documentation for details.
     void FixedUpdate()
     {
+
+        if (!alive)
+            return;
+
         float moveHorizontal = Input.GetAxisRaw("Horizontal");
 
         if (Mathf.Abs(moveHorizontal) > 0)
@@ -157,6 +178,12 @@ public class PlayerMovement : MonoBehaviour
 
     public JumpOverGoomba jumpOverGoomba;
 
+    void GameOverScene()
+    {
+
+        GameOver(); // replace this with whichever way you triggered the game over screen for Checkoff 1
+    }
+
     private void ResetGame()
     {
         // reset position
@@ -176,6 +203,12 @@ public class PlayerMovement : MonoBehaviour
         {
             jumpOverGoomba.score = 0;
         }
+
+        // reset animation
+        marioAnimator.Rebind();
+        alive = true;
+        onGroundState = true;
+        marioAnimator.SetBool("onGround", onGroundState);
     }
 }
 

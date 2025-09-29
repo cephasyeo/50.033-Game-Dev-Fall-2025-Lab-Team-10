@@ -3515,6 +3515,8 @@ MonoBehaviour:
   scoreText: {fileID: 654975873}
   enemies: {fileID: 1559017813}
   marioAudio: {fileID: 1901078120}
+  marioDeath: {fileID: 8300000, guid: c6bd5b47022424d6e99d9526239cd21b, type: 3}
+  deathImpulse: 15
   jumpOverGoomba: {fileID: 1901078118}
 --- !u!50 &1901078114
 Rigidbody2D:
