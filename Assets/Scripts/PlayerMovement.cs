@@ -95,7 +95,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Vector2 movement = new Vector2(moveHorizontal, 0);
             // check if it doesn't go beyond maxSpeed
-            if (marioBody.velocity.magnitude < maxSpeed)
+            if (marioBody.linearVelocity.magnitude < maxSpeed)
                 marioBody.AddForce(movement * speed);
         }
 
@@ -103,7 +103,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyUp("a") || Input.GetKeyUp("d"))
         {
             // stop
-            marioBody.velocity = Vector2.zero;
+            marioBody.linearVelocity = Vector2.zero;
         }
 
         // other instructions
