@@ -30,6 +30,8 @@ public class PlayerMovement : MonoBehaviour
     public AudioClip marioDeath;
     public float deathImpulse = 15;
 
+    public Transform gameCamera;
+
     // state
     [System.NonSerialized]
     public bool alive = true;
@@ -209,6 +211,9 @@ public class PlayerMovement : MonoBehaviour
         alive = true;
         onGroundState = true;
         marioAnimator.SetBool("onGround", onGroundState);
+
+        // reset camera position
+        gameCamera.position = new Vector3(-15.06f, 7.02f, -10f);
     }
 }
 
