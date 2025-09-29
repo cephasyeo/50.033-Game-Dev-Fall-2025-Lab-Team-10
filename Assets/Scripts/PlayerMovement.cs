@@ -19,9 +19,19 @@ public class PlayerMovement : MonoBehaviour
     public GameObject gameOverPanel;
     public TextMeshProUGUI finalScoreText;
 
+    public Animator marioAnimator;
+
     // other variables
     public TextMeshProUGUI scoreText;
     public GameObject enemies;
+
+    public AudioSource marioAudio;
+
+    void PlayJumpSound()
+    {
+        // play jump sound
+        marioAudio.PlayOneShot(marioAudio.clip);
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +46,8 @@ public class PlayerMovement : MonoBehaviour
         if (gameOverPanel != null)
             gameOverPanel.SetActive(false);
 
+        marioAnimator.SetBool("onGround", onGroundState);
+
     }
 
     // Update is called once per frame
@@ -46,20 +58,31 @@ public class PlayerMovement : MonoBehaviour
         {
             faceRightState = false;
             marioSprite.flipX = true;
+
+            if (marioBody.linearVelocity.x > 0.1f)
+                marioAnimator.SetTrigger("onSkid");
+
         }
 
         if (Input.GetKeyDown("d") && !faceRightState)
         {
             faceRightState = true;
             marioSprite.flipX = false;
+
+            if (marioBody.linearVelocity.x < -0.1f)
+                marioAnimator.SetTrigger("onSkid");
         }
+
+        marioAnimator.SetFloat("xSpeed", Mathf.Abs(marioBody.linearVelocity.x));
     }
+
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.CompareTag("Ground")) onGroundState = true;
-        if (col.gameObject.CompareTag("Enemy"))
+        if (col.gameObject.CompareTag("Ground") && !onGroundState)
         {
-            Debug.Log("Collided with goomba!");
+            onGroundState = true;
+            // update animator state
+            marioAnimator.SetBool("onGround", onGroundState);
         }
     }
 
@@ -111,6 +134,9 @@ public class PlayerMovement : MonoBehaviour
         {
             marioBody.AddForce(Vector2.up * upSpeed, ForceMode2D.Impulse);
             onGroundState = false;
+
+            // update animator state
+            marioAnimator.SetBool("onGround", onGroundState);
         }
     }
 
